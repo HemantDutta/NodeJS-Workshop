@@ -17,7 +17,7 @@ let server = http.createServer(function(req,res){
         });
     }
     else if(url=="/about"){
-        fs.readFile(path.join(__dirname,'about.html'),'utf-8',(err,data)=>{
+        fs.readFile('about.html','utf-8',(err,data)=>{
             if(err) throw err;
             res.end(data);
         });
